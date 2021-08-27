@@ -153,18 +153,21 @@
 	</div>
 	</div>
 
-<!-- МОДАЛЬНОЕ ОКНО !-->
+<!-- МОДАЛЬНОЕ ОКНО -->
 
-	
+	<!--вход - авторизация-->
+
 		<div class="popup">
 			<img src="img/Close_icon.svg" class="close_popup">
+
 			<div id="tabs">
 				<ul>
-					<li style="font-size: 28px;">ВХОД</li>
-					<li style="color: #ddd; font-size: 20px;">Регистрация</li>
+					<li><span id="tab1" class="is-green">ВХОД</span></li>
+					<li><span id="tab2" class='is-gray'>Регистрация</span></li>
 				</ul>
 			</div>
-			<form id="form" class="form">
+
+			<form id="avt_form" class="form is-active" method="post">         <!-- форма авторизации-->
 
 				<div class="form-control">
 					<label>Ваша электронная почта</label>
@@ -185,8 +188,44 @@
 					<img class="img_button" src="img/green_button.png">
 					</div>
 				</a>
-            
             </form>
+
+            <!--вход - регистрация-->
+
+            <form id="reg_form" class="form is-inactive" method="post">
+
+				
+            	<div class="form-control">
+               		 <label>Ваше ФИО</label>
+               		 <input type="text" placeholder="Иванов Иван Иванович" id="fio">
+               		 <small>Ошибка</small>
+            	</div>
+
+				<div class="form-control">
+					<label>Ваша электронная почта</label>
+            		<input type="text" placeholder="anybody@anywhere.com" id="email_reg"/>
+            		<small>Ошибка</small>	
+             	</div>
+
+				<div class="form-control">
+               		 <label>Ваш пароль</label>
+               		 <input type="text" placeholder="Password" id="password_reg">
+               		 <small>Ошибка</small>
+            	</div>
+
+            	<div class="form-control">
+               		 <label>Повторите ваш пароль</label>
+               		 <input type="text" placeholder="Password" id="password2">
+               		 <small>Ошибка</small>
+            	</div>
+
+            	<a href="" id="btn_reg">
+					<div class="green_button">ВОЙТИ                  <!--зеленая кнопка Войти !-->
+					<img class="img_button" src="img/green_button.png">
+					</div>
+				</a>
+			</form>
+
 		</div>
 	
 		<!-- кнопка прокрутки страницы в мобильной версии-->
