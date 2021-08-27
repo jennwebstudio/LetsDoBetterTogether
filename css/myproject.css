@@ -1,20 +1,26 @@
 @font-face {
 	font-family: 'Geometria';                        /*обычный шрифт*/
-	src: url(../fonts/geometria-medium.ttf);
+	src: local("geometria-medium"),
+	url("../fonts/geometria-medium.woff") format("woff"),
+	url("../fonts/geometria-medium.ttf") format("ttf");
 }
 @font-face {
 	font-family: 'Geometria bold';                   /*жирный шрифт*/
-	src: url(../fonts/geometria-bold.ttf);
+	src: local("geometria-bold"),
+	 url("../fonts/geometria-bold.woff") format("woff"),
+	 url("../fonts/geometria-bold.ttf") format("ttf");
 }
 @font-face {
 	font-family: 'Oswald';                           /*шрифт Освальд*/              
-	src: url(../fonts/Oswaldmedium.ttf);
+	src: local("Oswaldmedium"),
+	url("../fonts/Oswaldmedium.woff") format("woff"),
+	url("../fonts/Oswaldmedium.ttf") format("ttf");
 }
 body {
 	padding: 0;
 	margin: 0;
 	font-size: 10px;
-	font-family: 'Geometria';
+	font-family: 'Geometria', sans-serif;
 	background: #fefefe;
 }
 
@@ -42,7 +48,7 @@ header {                                              /* шапка*/
 h1 {                                                   /*заголовок шапки*/
 	color: #75AFD7;
 	font-size: 3.5rem;
-	font-family: 'Geometria bold';
+	font-family: 'Geometria bold', sans-serif;
 }
 .text_header {                                         /* текст шапки (подзаголовок) */
 	font-size: 2rem;
@@ -108,22 +114,35 @@ h1 {                                                   /*заголовок ша
 }
 #tabs ul {
 	padding-left: 10px;
-	font-family: 'Geometria bold';
+	font-family: 'Geometria bold', sans-serif;
 	margin-left: 20px;
 	list-style-type: none;
 	text-align: left;
 }
 #tabs ul li {
 	display: inline-block;
-	color: #70C492;
 	margin-right: 15px;
+}
+.is-gray {
+	color: #ddd; 
+	font-size: 20px;
+	cursor: pointer;
+}
+.is-green {
+	font-size: 28px;
+	text-transform: uppercase;
+	color: #70C492;
 }
 .form {
 	padding: 30px 25px;
 	text-align: left;
 }
-
-
+.is-active {
+	display: block;
+}
+.is-inactive {
+	display: none;
+}
 .form-control {
 	margin-bottom: 5px;
 	padding-bottom: 20px;
@@ -189,7 +208,7 @@ nav {                                                 /*контейнер ме�
 .nav_item {                                             /*пункт меню */
 	color: #70C492;
 	font-size: 1.4rem;
-	font-family: 'Geometria bold';
+	font-family: 'Geometria bold', sans-serif;
 	flex-grow: 1;
 }
 .nav_item:hover {
@@ -280,7 +299,7 @@ nav {                                                 /*контейнер ме�
 h2 {                                                        /*заголовок 2 и 3 блоков */
 	width: 100vw;
 	color: #75AFD7;
-	font-family: 'Geometria bold';
+	font-family: 'Geometria bold', sans-serif;
 	font-size: 2.8rem;
 	margin-top: 4rem;
 	margin-bottom: 3rem;
@@ -541,11 +560,26 @@ h1 {                                                              /*заголо
 	color: #70C492;
 	margin-right: 15px;
 }
+.is-gray {
+	color: #ddd; 
+	font-size: 20px;
+	cursor: pointer;
+}
+.is-green {
+	font-size: 28px;
+	text-transform: uppercase;
+	color: #70C492;
+}
 .form {
 	padding: 30px 25px;
 	text-align: left;
 }
-
+.is-active {
+	display: block;
+}
+.is-inactive {
+	display: none;
+}
 
 .form-control {
 	margin-bottom: 5px;
